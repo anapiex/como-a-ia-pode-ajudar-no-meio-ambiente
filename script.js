@@ -1,24 +1,24 @@
-// Dados contendo as explicações para cada etapa do fluxograma
+// Dados focados na redução e combate à poluição
 const stepDetails = {
     1: {
-        title: "1. Coleta de Dados Ambientais",
-        description: "Sensores IoT, imagens de satélite, drones e câmeras terrestres monitoram florestas, oceanos e a atmosfera em tempo real. A IA precisa desses dados brutos (imagens, temperatura, umidade, ruídos) para poder analisar o ecossistema."
+        title: "1. Monitoramento de Emissões e Descartes",
+        description: "Sensores instalados em chaminés de fábricas, bueiros urbanos e rios monitoram a liberação de gases tóxicos e efluentes químicos. Satélites rastreiam a qualidade do ar nas grandes cidades e o acúmulo de plástico nos oceanos."
     },
     2: {
-        title: "2. Processamento e Visão Computacional",
-        description: "Algoritmos de Inteligência Artificial e Machine Learning analisam terabytes de dados em segundos. A Visão Computacional, por exemplo, consegue identificar padrões de desmatamento, focos de incêndio ou áudio de serras elétricas na floresta que humanos levariam dias para notar."
+        title: "2. Mapeamento de Fontes Poluidoras",
+        description: "A Inteligência Artificial analisa esses dados para identificar a origem exata dos poluentes. Ela consegue diferenciar poluição veicular de industrial, rastrear vazamentos de óleo no mar e detectar descarte ilegal de lixo antes que cause danos maiores."
     },
     3: {
-        title: "3. Diagnóstico e Modelagem Preditiva",
-        description: "A IA cruza informações para emitir alertas precoces. Ela consegue prever para onde um incêndio florestal vai se espalhar com base no vento, prever secas severas ou mapear áreas de risco de extinção de espécies."
+        title: "3. Otimização de Processos e Eficiência",
+        description: "Algoritmos de IA ajudam fábricas e sistemas de transporte a consumir menos combustível e gerar menos resíduos. Ela otimiza as rotas de trânsito para diminuir a queima de dióxido de carbono (CO2) e ajusta máquinas industriais para emitirem o mínimo de poluição."
     },
     4: {
-        title: "4. Ação Humana Direcionada",
-        description: "A IA não age sozinha. Os insights gerados pela IA são enviados para ONGs, governos e guardas florestais. Com esses dados precisos, os humanos conseguem enviar equipes exatamente onde o crime ambiental está acontecendo, otimizando recursos."
+        title: "4. Ação Direta e Limpeza Inteligente",
+        description: "Com o mapa da poluição em mãos, governos e ONGs aplicam multas e corrigem falhas. Além disso, a IA orienta robôs e barcos autônomos para recolher plástico dos rios e oceanos de forma automatizada e eficiente."
     },
     5: {
-        title: "5. Impacto e Preservação de Longo Prazo",
-        description: "O resultado é uma proteção ambiental mais rápida, barata e eficiente. A IA também ajuda a planejar o reflorestamento inteligente (usando drones para plantar sementes) e a criar energias renováveis mais eficientes."
+        title: "5. Redução da Pegada Ecológica",
+        description: "A aplicação contínua da IA reduz a presença de microplásticos nas águas, melhora a qualidade do ar que respiramos nas cidades e acelera a transição para energias limpas (solar e eólica), deixando o ecossistema saudável."
     }
 };
 
@@ -38,7 +38,6 @@ function updatePanel(stepNumber) {
 
 // Adicionando eventos aos cards
 cards.forEach(card => {
-    // Evento ao passar o mouse
     card.addEventListener('mouseenter', () => {
         const step = card.getAttribute('data-step');
         
@@ -48,7 +47,6 @@ cards.forEach(card => {
         updatePanel(step);
     });
 
-    // Evento ao clicar (para dispositivos touch)
     card.addEventListener('click', () => {
         const step = card.getAttribute('data-step');
         
